@@ -1,223 +1,214 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+import plotly.express as px
+import requests
 import json
 
-# -------------------------
-# Page Setup
-# -------------------------
 st.set_page_config(layout="wide")
-st.title("🚀 Smart Project Dashboard System")
+st.title("🚀 Smart Project Dashboard (Pro)")
 
 # -------------------------
-# Upload Files
+# Bitrix Fetch Function
 # -------------------------
-csv_file = st.file_uploader("Upload Tasks CSV", type="csv")
-config_file = st.file_uploader("Upload Config JSON (optional)", type="json")
+def fetch_bitrix_tasks(webhook_url):
+    tasks = []
+    start = 0
 
-if not csv_file:
-    st.info("👆 Upload a CSV file to start the dashboard")
-    st.stop()
+    while True:
+        url = f"{webhook_url}?start={start}"
+        response = requests.get(url).json()
+
+        data = response.get('result', {}).get('tasks', [])
+        tasks.extend(data)
+
+        if 'next' in response:
+            start = response['next']
+        else:
+            break
+
+    return tasks
+
+# -------------------------
+# Convert to DataFrame
+# -------------------------
+def tasks_to_df(tasks):
+    records = []
+
+    for t in tasks:
+        records.append({
+            'ID': t['id'],
+            'Task': t['title'],
+            'Created by': t['createdBy']['name'],
+            'Assignee': t['responsible']['name'],
+            'Status': str(t['status']),
+            'Created on': t['createdDate'],
+            'Completed on': t.get('closedDate'),
+            'Deadline': t.get('deadline'),
+            'Project': t.get('group', {}).get('name', 'No Project')
+        })
+
+    return pd.DataFrame(records)
+
+# -------------------------
+# Sidebar: Data Source
+# -------------------------
+st.sidebar.header("📥 Data Source")
+
+data_source = st.sidebar.radio(
+    "Choose Data Source",
+    ["Upload CSV", "Bitrix API"]
+)
 
 # -------------------------
 # Load Data
 # -------------------------
-df = pd.read_csv(csv_file)
+df = None
 
-# -------------------------
-# Load Config
-# -------------------------
-if config_file:
-    roles = json.load(config_file)
-else:
-    roles = {
-        "testers": [],
-        "regular_creators": [],
-        "frontend_team": [],
-        "backend_team": []
-    }
+if data_source == "Upload CSV":
+    file = st.sidebar.file_uploader("Upload CSV", type="csv")
+    if file:
+        df = pd.read_csv(file)
 
-# -------------------------
-# Dynamic Role Selection UI
-# -------------------------
-st.sidebar.header("⚙️ Define Team Roles")
+elif data_source == "Bitrix API":
+    webhook = st.sidebar.text_input("Enter Inbound Webhook URL")
+    if webhook:
+        tasks = fetch_bitrix_tasks(webhook)
+        df = tasks_to_df(tasks)
 
-all_users = pd.concat([df['Created by'], df['Assignee']]).dropna().unique()
-
-roles['testers'] = st.sidebar.multiselect("Testers (Bug creators)", all_users, default=roles['testers'])
-roles['regular_creators'] = st.sidebar.multiselect("Regular Task Creators", all_users, default=roles['regular_creators'])
-roles['frontend_team'] = st.sidebar.multiselect("Frontend Team", all_users, default=roles['frontend_team'])
-roles['backend_team'] = st.sidebar.multiselect("Backend Team", all_users, default=roles['backend_team'])
+if df is None:
+    st.info("👆 Upload data or connect Bitrix")
+    st.stop()
 
 # -------------------------
 # Data Cleaning
 # -------------------------
-date_cols = ['Created on','Completed on','Deadline']
-for col in date_cols:
+for col in ['Created on','Completed on','Deadline']:
     if col in df.columns:
         df[col] = pd.to_datetime(df[col], errors='coerce')
 
 # -------------------------
+# Multi-Project Filter 🔥
+# -------------------------
+st.sidebar.header("📁 Project Filter")
+
+projects = df['Project'].dropna().unique()
+selected_projects = st.sidebar.multiselect(
+    "Select Projects",
+    projects,
+    default=projects
+)
+
+df = df[df['Project'].isin(selected_projects)]
+
+# -------------------------
+# Roles Config
+# -------------------------
+st.sidebar.header("⚙️ Roles")
+
+all_users = pd.concat([df['Created by'], df['Assignee']]).dropna().unique()
+
+testers = st.sidebar.multiselect("Testers", all_users)
+frontend = st.sidebar.multiselect("Frontend", all_users)
+backend = st.sidebar.multiselect("Backend", all_users)
+
+# -------------------------
 # Categorization
 # -------------------------
-def categorize_task(row):
-    if row['Created by'] in roles['testers']:
+def categorize(row):
+    if row['Created by'] in testers:
         return 'Bug'
-    elif row['Created by'] in roles['regular_creators']:
-        return 'Regular Task'
-    elif row['Assignee'] in roles['frontend_team']:
-        return 'Frontend Task'
-    elif row['Assignee'] in roles['backend_team']:
-        return 'Backend Task'
+    elif row['Assignee'] in frontend:
+        return 'Frontend'
+    elif row['Assignee'] in backend:
+        return 'Backend'
     else:
         return 'Other'
 
-df['Task Category'] = df.apply(categorize_task, axis=1)
-df['Is Bug'] = df['Created by'].isin(roles['testers'])
-df['Is Completed'] = df['Status'].astype(str).str.lower().str.contains('complete', na=False)
-df['Completion Time'] = (df['Completed on'] - df['Created on']).dt.days
-df['Is Late'] = df['Completed on'] > df['Deadline']
-
-# -------------------------
-# Filters
-# -------------------------
-st.sidebar.header("📊 Filters")
-
-assignee_filter = st.sidebar.multiselect(
-    "Assignee",
-    df['Assignee'].dropna().unique(),
-    default=df['Assignee'].dropna().unique()
-)
-
-df_filtered = df[df['Assignee'].isin(assignee_filter)]
+df['Task Category'] = df.apply(categorize, axis=1)
+df['Is Bug'] = df['Created by'].isin(testers)
+df['Is Completed'] = df['Status'].str.contains('5|complete', case=False, na=False)
 
 # -------------------------
 # Overview
 # -------------------------
 st.header("📊 Overview")
 
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3 = st.columns(3)
 
-total = len(df_filtered)
-completed = df_filtered['Is Completed'].sum()
-bugs = df_filtered['Is Bug'].sum()
-rate = (completed / total * 100) if total > 0 else 0
+col1.metric("Total Tasks", len(df))
+col2.metric("Completed", df['Is Completed'].sum())
+col3.metric("Bugs", df['Is Bug'].sum())
 
-col1.metric("Total Tasks", total)
-col2.metric("Completed", completed)
-col3.metric("Completion %", f"{rate:.1f}%")
-col4.metric("Bugs", bugs)
-
-# Pie Chart
-fig1, ax1 = plt.subplots()
-df_filtered['Task Category'].value_counts().plot(kind='pie', autopct='%1.1f%%', ax=ax1)
-ax1.set_ylabel("")
-st.pyplot(fig1)
+# Pie
+fig = px.pie(df, names='Task Category', title="Tasks Distribution")
+st.plotly_chart(fig, use_container_width=True)
 
 # -------------------------
-# Detailed Analysis
-# -------------------------
-st.header("📋 Detailed Analysis")
-
 # Tasks per Assignee
-fig2, ax2 = plt.subplots(figsize=(10,4))
-df_filtered['Assignee'].value_counts().plot(kind='bar', ax=ax2)
-ax2.set_title("Tasks per Assignee")
-st.pyplot(fig2)
+# -------------------------
+fig = px.bar(
+    df['Assignee'].value_counts().reset_index(),
+    x='Assignee',
+    y='count',
+    title="Tasks per Assignee"
+)
+st.plotly_chart(fig, use_container_width=True)
 
+# -------------------------
 # Bugs per Assignee
-fig3, ax3 = plt.subplots(figsize=(10,4))
-df_filtered[df_filtered['Is Bug']].groupby('Assignee')['ID'].count().plot(kind='bar', ax=ax3)
-ax3.set_title("Bugs per Assignee")
-st.pyplot(fig3)
+# -------------------------
+bugs_df = df[df['Is Bug']]
+
+fig = px.bar(
+    bugs_df['Assignee'].value_counts().reset_index(),
+    x='Assignee',
+    y='count',
+    title="Bugs per Assignee",
+    color_discrete_sequence=['red']
+)
+st.plotly_chart(fig, use_container_width=True)
 
 # -------------------------
 # Burndown Chart
 # -------------------------
-st.header("📉 Burndown Chart")
+st.header("📉 Burndown")
 
-min_date = df['Created on'].min().date()
-max_date = df['Completed on'].max().date()
+start = df['Created on'].min()
+end = df['Completed on'].max()
 
-start_date, end_date = st.slider(
-    "Select Date Range",
-    min_value=min_date,
-    max_value=max_date,
-    value=(min_date, max_date)
-)
+days = pd.date_range(start=start, end=end)
 
-start_date = pd.Timestamp(start_date)
-end_date = pd.Timestamp(end_date)
+remaining = [df[df['Completed on'] > d].shape[0] for d in days]
 
-days = pd.date_range(start=start_date, end=end_date)
+burndown_df = pd.DataFrame({
+    'Date': days,
+    'Remaining': remaining
+})
 
-remaining = []
-for day in days:
-    remaining.append(df[df['Completed on'] > day].shape[0])
-
-fig4, ax4 = plt.subplots(figsize=(12,5))
-ax4.plot(days, remaining, marker='o', label='Actual')
-
-if len(remaining) > 0:
-    ideal = [remaining[0] - i*(remaining[0]/(len(days)-1)) for i in range(len(days))]
-    ax4.plot(days, ideal, linestyle='--', label='Ideal')
-
-ax4.set_title("Burndown Chart")
-ax4.legend()
-ax4.grid()
-
-st.pyplot(fig4)
+fig = px.line(burndown_df, x='Date', y='Remaining', title="Burndown Chart")
+st.plotly_chart(fig, use_container_width=True)
 
 # -------------------------
-# Team Velocity
+# Velocity
 # -------------------------
 st.header("🚀 Team Velocity")
 
-df_completed = df_filtered[df_filtered['Is Completed'] == True]
+df_completed = df[df['Is Completed']]
 
 if not df_completed.empty:
-
     velocity = df_completed.groupby(
         df_completed['Completed on'].dt.to_period('W')
     ).size()
 
     velocity_df = velocity.reset_index()
-    velocity_df.columns = ['Week', 'Completed Tasks']
+    velocity_df.columns = ['Week', 'Tasks']
     velocity_df['Week'] = velocity_df['Week'].astype(str)
 
-    fig5, ax5 = plt.subplots(figsize=(10,4))
-    ax5.plot(velocity_df['Week'], velocity_df['Completed Tasks'], marker='o')
-
-    ax5.set_title("Team Velocity (Weekly)")
-    ax5.set_xlabel("Week")
-    ax5.set_ylabel("Tasks")
-    ax5.grid(True)
-
-    plt.xticks(rotation=45)
-    st.pyplot(fig5)
-
-    # Velocity per Category
-    st.subheader("Velocity by Task Category")
-
-    velocity_team = df_completed.groupby(
-        [df_completed['Completed on'].dt.to_period('W'), 'Task Category']
-    ).size().unstack(fill_value=0)
-
-    velocity_team.index = velocity_team.index.astype(str)
-
-    fig6, ax6 = plt.subplots(figsize=(12,5))
-    velocity_team.plot(ax=ax6, marker='o')
-
-    ax6.grid(True)
-    plt.xticks(rotation=45)
-
-    st.pyplot(fig6)
-
-else:
-    st.warning("No completed tasks available for velocity calculation")
+    fig = px.line(velocity_df, x='Week', y='Tasks', markers=True, title="Velocity")
+    st.plotly_chart(fig, use_container_width=True)
 
 # -------------------------
-# Data Table
+# Table
 # -------------------------
-st.header("📄 Data Table")
-st.dataframe(df_filtered)
+st.header("📄 Data")
+st.dataframe(df)

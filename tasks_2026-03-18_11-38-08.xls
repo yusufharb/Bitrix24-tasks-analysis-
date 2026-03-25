@@ -1,0 +1,608 @@
+﻿
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+
+<table border="1">
+	<thead>
+	<tr>
+
+		<th>ID</th>
+					<th>Task</th>
+					<th>Description</th>
+					<th>Active</th>
+					<th>Deadline</th>
+					<th>Created by</th>
+					<th>Assignee</th>
+					<th>Participants</th>
+					<th>Observers</th>
+					<th>Status</th>
+					<th>Project</th>
+					<th>Created on</th>
+					<th>Start date</th>
+					<th>Modified on</th>
+					<th>Completed on</th>
+					<th>Planned duration</th>
+					<th>Track time spent</th>
+					<th>Rating</th>
+					<th>Assignee can change deadline</th>
+					<th>Time spent</th>
+					<th>Tags</th>
+					<th>Lead</th>
+					<th>Contact</th>
+					<th>Company</th>
+					<th>Deal</th>
+					<th>CRM</th>
+					<th>Parent task ID</th>
+					<th>Parent task name</th>
+					<th>Planned start date</th>
+					<th>Due date</th>
+					<th>Flow</th>
+					<th>Priority</th>
+					<th>Severity</th>
+					<th>Environment</th>
+					<th>Type</th>
+					<th>Platform</th>
+					
+		</tr>
+	</thead>
+
+	<tbody>
+	
+			<tr>
+			<td>45558</td><td>[Linker Responsive - Website &quot;Merchant&quot; Module] Make the Admin Module responsive to suitable for all devices</td><td>&amp;#91;Merchant Module&amp;#93; Make the Merchant Module responsive to suitable for all devices</td><td>03/05/2026 09:47:21 am</td><td></td><td>Ahmed Abdelfattah</td><td>Ahmed Abdelfattah</td><td></td><td>Omar Adly</td><td>Pending</td><td>Linkere</td><td>02/25/2026 11:51:06 am</td><td></td><td>03/05/2026 09:47:21 am</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>45560</td><td>[Linker Responsive - Supplier Module] Make the Supplier Module responsive to suitable for all devices</td><td>&amp;#91;Supplier Module&amp;#93; Make the Supplier Module responsive to suitable for all devices</td><td>03/05/2026 09:47:27 am</td><td></td><td>Ahmed Abdelfattah</td><td>ammar elkhouly</td><td></td><td></td><td>In Progress</td><td>Linkere</td><td>02/25/2026 11:51:48 am</td><td>02/25/2026 01:37:21 pm</td><td>03/05/2026 09:47:27 am</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>45602</td><td>User Story: Ex-Works (EXW) Checkout</td><td>Title: Checkout with Ex-Works Shipping Option
+
+As a customer
+I want to select Ex-Works (EXW) as the shipping method during checkout
+So that I can arrange pickup and shipping of the goods directly from the seller’s location.
+
+
+Description
+
+Ex-Works (EXW) allows the buyer to take full responsibility for shipping, customs clearance, and delivery from the seller’s warehouse or store location. During checkout, the user can select EXW instead of standard shipping options.
+
+
+Acceptance Criteria
+
+
+Shipping Method Visibility
+EXW option is displayed in the shipping methods section if the product supports EXW.The option clearly states: “Buyer arranges pickup from seller location.”
+Seller Location Display
+When EXW is selected, the seller’s pickup address and contact details are shown.
+Shipping Cost
+Shipping cost is set to 0 when EXW is selected.Order summary updates dynamically after selection.
+Pickup Acknowledgment
+User must check a confirmation box:&quot;“I understand that I am responsible for pickup, shipping, and customs clearance.”
+&quot;
+Order Confirmation
+Order status is marked as:
+Pending Pickup after successful payment.
+Seller receives notification that order is EXW.
+Notifications
+Buyer receives confirmation email including:
+Seller pickup addressContact informationOrder reference number
+
+Admin Panel
+Admin can see shipping type = EXW in order details.Admin can filter orders by shipping method (EXW).
+
+
+</td><td>02/26/2026 09:40:24 am</td><td></td><td>Ahmed Abdelfattah</td><td>Ahmed Abdelfattah</td><td></td><td>Hesham Raafat, Mohamed Salah, Anwar Abdelmaksoud, Muhammed Talaat, Yara Mahmoud</td><td>Pending</td><td>Linkere</td><td>02/26/2026 09:29:31 am</td><td></td><td>02/26/2026 09:40:24 am</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>45638</td><td>Test</td><td></td><td>03/17/2026 07:00:07 pm</td><td>03/18/2026 07:00:00 pm</td><td>Hesham Raafat</td><td>Hesham Raafat</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>02/26/2026 12:58:31 pm</td><td>02/26/2026 01:08:43 pm</td><td>02/26/2026 01:17:14 pm</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>Admin, Backend, enhancement, Frontend, Merchant, Mobile, Supplier Dash</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>45672</td><td>[Supplier View] Company profile update to collapse</td><td>Company Information
+
+
+Company NameCountryAbout Company (EN)About Company (AR)Year of EstablishmentAuthorized Person
+
+
+2. Contact Details
+
+
+EmailPhone NumberAddressTimezone
+
+
+3. Business Details
+
+
+Main ProductsTrade TermsWorking DaysUpload the tems and conditions
+</td><td>03/15/2026 10:15:45 am</td><td>03/29/2026 12:00:00 am</td><td>Ahmed Abdelfattah</td><td>Ahmed Abdelfattah</td><td></td><td>Omar Adly</td><td>Pending</td><td>Linkere</td><td>03/01/2026 10:22:20 am</td><td></td><td>03/15/2026 10:15:45 am</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>45674</td><td>[Supplier Dashboard] Add Terms &amp; Conditions Upload in Company Profile</td><td>Social Media Fields
+
+
+[th]Field
+[/th][th]Type
+[/th][th]Description
+[/th]facebook_url
+ string
+ Facebook page link
+ instagram_url
+ string
+ Instagram page link
+ snapchat_url
+ string
+ Snapchat page link
+ x_url
+ string
+ X (Twitter) page link
+ terms_conditions
+ text
+ Supplier terms and conditions
+ privacy_policy
+ text
+ Supplier privacy policy
+
+</td><td>03/12/2026 11:49:32 am</td><td></td><td>Ahmed Abdelfattah</td><td>Omar Adly</td><td></td><td>Omar Adly</td><td>Pending</td><td>Linkere</td><td>03/01/2026 10:28:04 am</td><td></td><td>03/17/2026 03:12:22 pm</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>45676</td><td>[Admin-2] user story  Admin Control over Merchant and Supplier Access</td><td>As an admin,
+I want to manage the status of merchants and suppliers (suspend or block),
+So that suspended users can login but have restricted actions, and blocked users are prevented from logging in or causing issues with ongoing orders.
+
+Acceptance Criteria:
+
+
+When a merchant is suspended, they can login but cannot add products to cart or proceed to checkout.When a supplier is suspended, they can login but their products are hidden from the website.When a merchant is blocked, they cannot login.When a supplier is blocked, if they have ongoing orders, they cannot be blocked until the orders are completed.
+</td><td>03/11/2026 12:00:03 am</td><td>03/11/2026 12:00:00 am</td><td>Ahmed Abdelfattah</td><td>Ahmed Abdelfattah</td><td></td><td>Amr Mohamed, Hesham Raafat, Muhammed Talaat, Yara Mahmoud</td><td>Pending</td><td>Linkere</td><td>03/01/2026 10:40:53 am</td><td></td><td>03/08/2026 09:37:00 am</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>45680</td><td>[Admin-2] user story  Admin Control over Merchant and Supplier Access</td><td>As an admin,
+I want to manage the status of merchants and suppliers (suspend or block),
+So that suspended users can login but have restricted actions, and blocked users are prevented from logging in or causing issues with ongoing orders.
+
+Acceptance Criteria:
+
+
+When a merchant is suspended, they can login but cannot add products to cart or proceed to checkout.When a supplier is suspended, they can login but their products are hidden from the website.When a merchant is blocked, they cannot login.When a supplier is blocked, if they have ongoing orders, they cannot be blocked until the orders are completed.
+</td><td>03/15/2026 10:15:44 am</td><td>03/29/2026 12:00:00 am</td><td>Ahmed Abdelfattah</td><td>Ahmed Abdelfattah</td><td></td><td>Amr Mohamed, Hesham Raafat, Omar Adly, Muhammed Talaat, Yara Mahmoud</td><td>Pending</td><td>Linkere</td><td>03/01/2026 10:43:41 am</td><td></td><td>03/15/2026 10:15:44 am</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>45676</td><td>[Admin-2] user story  Admin Control over Merchant and Supplier Access</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>45774</td><td>[Admin-3] user story Admin  Manage Academic Structures Master Data</td><td>Title:
+
+Admin can manage Academic Year, Subject, Curriculum Track, and Accrediting Bodies
+
+
+As a
+
+System Administrator
+
+I want to
+
+Add, edit, and activate/deactivate Academic Years, Subjects, Curriculum Tracks, and Accrediting Bodies
+
+So that
+
+I can manage the academic master data dynamically from the admin panel without developer intervention.
+
+
+📌 Acceptance Criteria
+
+1️⃣ Common Requirements for All Modules
+
+Applies to:
+
+
+Academic Year (السنه الدراسيه)Subject (المواد)Curriculum Track (المسار التعليمى)Accrediting Bodies (جهات الاعتماد)
+
+Add
+
+
+Admin can create a new record.Admin must enter:
+Name (Arabic) – requiredName (English) – required
+System validates required fields.System saves record with Active = true by default.
+
+Edit
+
+
+Admin can edit:
+Name (Arabic)Name (English)
+Changes are saved successfully.Validation rules apply on edit.
+
+Toggle Status
+
+
+Admin can toggle status between:
+ActiveInactive
+Status change is reflected immediately in listing.Inactive records should not appear in public-facing or dependent dropdowns.
+
+Listing
+
+
+Admin can view paginated list.Admin can see:
+Name (Arabic)Name (English)Status (Active / Inactive)Actions (Edit / Toggle)
+
+
+Search &amp; Filter
+
+
+Admin can search by:
+Arabic nameEnglish name
+Admin can filter by:
+ActiveInactive
+
+</td><td>03/11/2026 12:00:06 am</td><td>03/11/2026 12:00:00 am</td><td>Ahmed Abdelfattah</td><td>Ahmed Abdelfattah</td><td></td><td>Amr Mohamed, Hesham Raafat</td><td>Pending</td><td>Linkere</td><td>03/02/2026 12:26:16 pm</td><td></td><td>03/08/2026 09:36:59 am</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>45808</td><td>500 Internal Server Error</td><td></td><td>03/02/2026 02:15:48 pm</td><td></td><td>Muhammed Talaat</td><td>Ahmed Abdelfattah</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/02/2026 02:14:25 pm</td><td></td><td>03/02/2026 02:15:48 pm</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>Backend, bug</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>45902</td><td>Phone Number Not Reset After Changing Country</td><td>Actual Result:
+&quot;When the country is changed, the phone number remains unchanged, and the country code does not update accordingly.
+&quot;
+Expected Result:
+&quot;When the country is changed, the phone number field should be cleared, and the country code should automatically update based on the selected country.
+&quot;</td><td>03/12/2026 11:30:00 am</td><td></td><td>Muhammed Talaat</td><td>Anwar Abdelmaksoud</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/03/2026 01:08:18 pm</td><td></td><td>03/03/2026 01:50:28 pm</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>Frontend, bug, Merchant</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>45956</td><td>Team Management in website ( School )</td><td></td><td>03/04/2026 01:05:59 pm</td><td></td><td>Muhammed Talaat</td><td>Ahmed Abdelfattah</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/04/2026 01:04:09 pm</td><td></td><td>03/04/2026 01:05:59 pm</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>Backend, bug</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46054</td><td>[Supplier-1] user story Add New Product</td><td>Description:
+As a supplier, I want to add a new product with all required information (images, accreditation, packaging, pricing, shipping, and samples) so that the product can be published and sold on the marketplace.</td><td>03/12/2026 07:00:44 pm</td><td>03/12/2026 07:00:00 pm</td><td>Ahmed Abdelfattah</td><td>Ahmed Abdelfattah</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/05/2026 10:24:10 am</td><td></td><td>03/05/2026 10:24:46 am</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46286</td><td>[Admin-4] User Story — Membership Management</td><td>Title: Manage Membership for Suppliers
+
+As a Super Admin
+I want to manage the Membership configuration and assign it to suppliers
+So that all suppliers have a membership level that controls their participation in the platform.
+
+
+Description
+
+The system will contain a Membership module where the Super Admin can manage membership details.
+The system will initially contain one default membership created through a seed.
+
+All newly registered suppliers will automatically receive the default membership.
+The Super Admin can later update the membership details or change the membership assigned to a supplier.
+
+
+Acceptance Criteria
+
+
+The system must contain one default membership created through a seed during system setup.The Membership module must include the following fields:
+Name (Arabic)Name (English)PhotoStatus (Active / Deactive)
+The Super Admin can:
+View membership detailsAdd membership (if none exists)Edit membershipDelete membership
+The system must not allow more than one membership record at the same time.When a new supplier is created or registered, the system automatically assigns the default membership.The Super Admin can change the membership assigned to a supplier from the Admin Dashboard.Membership can be activated or deactivated by the Super Admin.Only users with the Super Admin role can manage the Membership module.
+</td><td>03/15/2026 07:01:53 pm</td><td>03/15/2026 07:00:00 pm</td><td>Ahmed Abdelfattah</td><td>Hesham Raafat</td><td></td><td>Muhammed Talaat</td><td>Pending</td><td>Linkere</td><td>03/08/2026 10:17:00 am</td><td></td><td>03/08/2026 10:20:40 am</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46316</td><td>[Merhcant view] Refactor the company profile cycle</td><td>Refactor the company profile cycle and upload it in Merchant cycle</td><td>03/17/2026 03:18:08 pm</td><td></td><td>Ahmed Abdelfattah</td><td>Ahmed Abdelfattah</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/08/2026 12:21:34 pm</td><td></td><td>03/17/2026 03:18:08 pm</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46326</td><td>Submit Button Should Be Enabled Only After Changing a Field in Edit Form</td><td></td><td>03/08/2026 01:32:48 pm</td><td></td><td>Muhammed Talaat</td><td>Omar Adly</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/08/2026 01:29:34 pm</td><td></td><td>03/08/2026 01:32:48 pm</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>Frontend, enhancement</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46332</td><td>School Can Create Order While Status Is Pending and Cannot Change Status to Active</td><td></td><td>03/08/2026 01:53:32 pm</td><td></td><td>Muhammed Talaat</td><td>Mohamed Salah</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/08/2026 01:32:14 pm</td><td></td><td>03/08/2026 01:53:32 pm</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>bug, Backend</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46398</td><td>[Admin-4] user story &quot;Commission Management&quot;</td><td>As an Admin, I want to set a default commission for the platform and override it for specific suppliers so that the platform can control profit margins per supplier.</td><td>03/15/2026 07:01:53 pm</td><td>03/15/2026 07:00:00 pm</td><td>Ahmed Abdelfattah</td><td>Hesham Raafat</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/09/2026 01:37:29 pm</td><td></td><td>03/09/2026 01:45:16 pm</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46496</td><td>Refresh button in chat screen shows &quot;Coming Soon&quot; and &quot;Unauthorized&quot;</td><td>Description:
+When the user clicks the refresh button while on the chat screen, unexpected messages appear including &quot;Coming Soon&quot; and &quot;This page will be here soon&quot;. The refresh action should update the chat messages instead of displaying these messages.
+
+Expected Result:
+The chat screen should refresh and display the latest messages.
+
+Actual Result:
+A message saying &quot;Coming Soon&quot; appears and &quot;This page will be here soon&quot; is displayed instead of refreshing the chat.</td><td>03/11/2026 10:47:08 am</td><td></td><td>Yara Mahmoud</td><td>Anwar Abdelmaksoud</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/11/2026 10:39:23 am</td><td></td><td>03/11/2026 10:47:08 am</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>bug, Frontend</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46498</td><td>Chat screen does not accept all image types</td><td>Description:
+The chat screen does not allow uploading or sending all image file types. When the user attempts to upload certain image formats, the system does not accept them or the upload fails. The chat should support common image formats for sending images.
+
+Expected Result:
+The chat screen should accept and send all supported image formats successfully.
+
+Actual Result:
+Some image file types are not accepted or cannot be uploaded in the chat.</td><td>03/11/2026 10:46:12 am</td><td></td><td>Yara Mahmoud</td><td>Anwar Abdelmaksoud</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/11/2026 10:44:28 am</td><td></td><td>03/11/2026 10:46:12 am</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>Frontend, bug</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46506</td><td>[Userstory] FCA Trade Term Order Handling</td><td>Title: Handle FCA Shipping for Multiple Warehousing Locations
+
+As a Merchant
+I want to choose the warehousing location and the quantity of products delivered to each location when ordering products with the FCA trade term
+So that the supplier can deliver the products to the correct warehouse locations according to the merchant’s shipping plan.
+
+
+Description
+
+When a merchant creates an order containing products with the FCA (Free Carrier) trade term, the merchant is responsible for selecting the delivery warehouse location where the supplier will hand over the goods.
+
+If the order contains multiple quantities of a product, the merchant can distribute the quantities across different warehouse addresses.
+
+For example:
+If the merchant orders 3 products, the merchant can choose which warehouse(s) will receive the shipment and specify the quantity delivered to each warehouse.
+
+
+Scenario
+
+
+Merchant adds 3 products with FCA trade term to the cart.During checkout, the Shipping Details section appears.The system displays the merchant’s saved warehouse addresses.The merchant selects one or more warehouses.The merchant enters the quantity of products to ship to each warehouse.The total quantity distributed across warehouses must equal the total ordered quantity.
+
+
+Acceptance Criteria
+
+1. FCA Shipping Section
+
+
+When the product trade term is FCA, the Shipping Details section appears in checkout.
+
+
+2. Warehouse Selection
+
+The merchant can:
+
+
+View available warehouse addresses.Select one or multiple warehouses for delivery.
+
+Each warehouse card includes:
+
+
+Warehouse nameAddressQuantity input field
+
+
+3. Quantity Distribution
+
+The merchant must enter:
+
+
+Quantity to ship to each warehouse
+
+Rules:
+
+
+Quantity must be greater than 0Total distributed quantity must equal the ordered quantity
+
+Example:
+
+
+[th]Warehouse
+[/th][th]Quantity
+[/th]Riyadh Dry Port
+ 1
+ Jeddah Port
+ 2
+
+
+Total = 3 product</td><td>03/17/2026 07:00:07 pm</td><td>03/18/2026 07:00:00 pm</td><td>Ahmed Abdelfattah</td><td>Hesham Raafat</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/11/2026 01:20:10 pm</td><td></td><td>03/11/2026 01:25:20 pm</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46518</td><td>Quantity Distribution Logic</td><td>Implement real-time validation.
+
+Rules:
+
+
+Total warehouse quantities = product order quantity
+
+Example:
+
+Product quantity = 3
+
+Valid:
+
+
+[th]Warehouse
+[/th][th]Qty
+[/th]Warehouse A
+ 1
+ Warehouse B
+ 2
+ Warehouse A
+ 1
+
+</td><td>03/17/2026 07:00:07 pm</td><td>03/18/2026 07:00:00 pm</td><td>Ahmed Abdelfattah</td><td>Anwar Abdelmaksoud</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/11/2026 01:37:09 pm</td><td></td><td>03/11/2026 01:37:43 pm</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>46506</td><td>[Userstory] FCA Trade Term Order Handling</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46536</td><td>Add Bank Account in Merchant Dashboard</td><td>
+
+
+Merchant can Add bank account from press Add new account in merchant profile
+-- we delete the account type from the form only fields 
+1- Bank name &quot;API for listing the banks&quot; {{host}}/banks
+2- Account holder name
+3- Swift code 
+4- Iban
+
+
+
+
+
+
+
+
+
+Create Bank Accounts Table</td><td>03/16/2026 10:51:26 am</td><td></td><td>Ahmed Abdelfattah</td><td>ammar elkhouly</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/11/2026 02:26:27 pm</td><td></td><td>03/18/2026 10:16:05 am</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46538</td><td>Add Product to Favourite</td><td>When user clicks heart icon (not favourite):
+
+Action:
+
+
+Send API request.
+
+API:
+
+
+POST /favorites
+
+Request body:
+
+
+product_id
+
+Expected result:
+
+
+Heart icon changes to filled.Show success feedback.
+
+Example message:
+
+
+Product added to favourites
+</td><td>03/17/2026 07:00:07 pm</td><td>03/18/2026 07:00:00 pm</td><td>Ahmed Abdelfattah</td><td>ammar elkhouly</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/11/2026 02:32:21 pm</td><td></td><td>03/18/2026 10:04:56 am</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46540</td><td>Check Favourite Status on Page Load</td><td>When loading products:
+
+Tasks:
+
+
+Fetch favourite status from API.Mark favourite products.
+
+Example API:
+
+
+GET /favorites
+
+Logic:
+
+
+if product in favorites
+   show filled heart
+else
+   show outline heart
+</td><td>03/17/2026 07:00:07 pm</td><td>03/18/2026 07:00:00 pm</td><td>Ahmed Abdelfattah</td><td>ammar elkhouly</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/11/2026 02:33:30 pm</td><td></td><td>03/18/2026 10:05:03 am</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46542</td><td>Need to enhancement Full Name , Email in School Profile</td><td></td><td>03/15/2026 11:10:50 am</td><td></td><td>Muhammed Talaat</td><td>Omar Adly</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/11/2026 02:32:28 pm</td><td></td><td>03/15/2026 11:10:03 am</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>Frontend, enhancement</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46544</td><td>Remove Product from Favourite</td><td>When user clicks heart icon (already favourite):
+
+Action:
+
+
+Send API request.
+
+API:
+
+
+DELETE /favorites/{product_id}
+
+Expected result:
+
+
+Heart icon changes to outline.Show feedback message.
+
+Example:
+
+
+Product removed from favourites
+</td><td>03/17/2026 07:00:07 pm</td><td>03/18/2026 07:00:00 pm</td><td>Ahmed Abdelfattah</td><td>ammar elkhouly</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/11/2026 02:34:39 pm</td><td></td><td>03/18/2026 10:05:52 am</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46564</td><td>Error message text overlaps and is not displayed on a single line</td><td>Description:
+There is a UI issue where the error message text appears overlapped and not properly aligned. The text is not displayed clearly on a single line, which makes it difficult for the user to read the message.
+
+Expected Result:
+The error message should appear clearly, properly aligned, and readable on a single line or properly wrapped.
+
+Actual Result:
+The error message text overlaps and is not properly aligned, causing readability issues.</td><td>03/12/2026 12:02:38 pm</td><td></td><td>Yara Mahmoud</td><td>Anwar Abdelmaksoud</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/12/2026 11:44:09 am</td><td></td><td>03/12/2026 12:02:38 pm</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>bug, Frontend</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46584</td><td>Incorrect validation message returned from backend</td><td>Description:
+The system displays an incorrect validation message coming from the backend. The message does not clearly reflect the actual validation error, which may confuse the user.</td><td>03/12/2026 01:44:12 pm</td><td></td><td>Yara Mahmoud</td><td>ammar elkhouly</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/12/2026 01:17:56 pm</td><td></td><td>03/18/2026 10:07:15 am</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>bug, Frontend</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46611</td><td>Need to change text merchant address to school address</td><td></td><td>03/15/2026 10:38:09 am</td><td></td><td>Muhammed Talaat</td><td>Anwar Abdelmaksoud</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/15/2026 10:35:52 am</td><td></td><td>03/15/2026 10:38:09 am</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>enhancement, Frontend</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46623</td><td>Need to handled when change country code after write phone number</td><td>
+
+Steps : 
+login website with school info@shgardi.com
+Click on profile and click on warehouse address 
+Click on add address 
+Write a phone number with country code KSA and fill all data without Saudi-arabia
+Click Save address and look 
+Actual result : need to change country code after select country
+Expected result : it send validation error The selected country code is invalid</td><td>03/15/2026 11:29:00 am</td><td></td><td>Muhammed Talaat</td><td>Anwar Abdelmaksoud</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/15/2026 10:40:59 am</td><td></td><td>03/15/2026 11:30:42 am</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>Frontend, Merchant, enhancement</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46628</td><td>Duplicate request sent to backend when pressing Enter after entering OTP in reset password</td><td>Description:
+During the Reset Password process, after entering the OTP and pressing Enter, the system sends the request to the backend twice instead of once. This may cause duplicate requests or unexpected behavior.
+
+Expected Result:
+Only one request should be sent to the backend when submitting the OTP.
+
+Actual Result:
+The system sends two requests to the backend when pressing Enter after entering the OTP.</td><td>03/15/2026 12:26:43 pm</td><td>03/22/2026 07:00:00 pm</td><td>Yara Mahmoud</td><td>ammar elkhouly</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/15/2026 12:25:03 pm</td><td></td><td>03/15/2026 12:26:43 pm</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>bug, Frontend</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46630</td><td>Amount to up bank need to able to number only</td><td>Amount of</td><td>03/15/2026 12:38:01 pm</td><td></td><td>Muhammed Talaat</td><td>Omar Adly</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/15/2026 12:36:01 pm</td><td></td><td>03/17/2026 12:49:58 pm</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>Frontend, enhancement</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46636</td><td>Add Bank Account in Supplier Dashboard</td><td>
+
+
+Merchant can Add bank account from press Add new account in Supplier profile
+-- we delete the account type from the form only fields 
+1- Bank name &quot;API for listing the banks&quot; {{host}}/banks
+2- Account holder name
+3- Swift code 
+4- Iban
+
+
+
+
+
+
+
+
+
+Create Bank Accounts Table</td><td>03/16/2026 10:51:19 am</td><td></td><td>Ahmed Abdelfattah</td><td>ammar elkhouly</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/15/2026 01:30:29 pm</td><td></td><td>03/18/2026 10:06:56 am</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46722</td><td>Need to Fix Search bar in Admin dashboard</td><td>Operations :
+Order History
+Requests
+Ports :
+Bug : Sort by distnas
+Shipment :
+Search not work
+Finance :
+Transactions History
+Payment methods
+Product list :
+Unit Types
+Chat
+Configration :
+Shipment types</td><td>03/17/2026 12:19:23 pm</td><td></td><td>Muhammed Talaat</td><td>Ahmad Maghrapy</td><td></td><td></td><td>In Progress</td><td>Linkere</td><td>03/16/2026 01:06:28 pm</td><td>03/16/2026 01:47:55 pm</td><td>03/17/2026 12:34:37 pm</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>bug, Backend, Admin</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46848</td><td>need to remove validation in Postal code</td><td></td><td>03/17/2026 01:37:11 pm</td><td></td><td>Muhammed Talaat</td><td>Mohamed Salah</td><td></td><td>Omar Adly</td><td>In Progress</td><td>Linkere</td><td>03/17/2026 10:23:29 am</td><td>03/17/2026 01:37:11 pm</td><td>03/17/2026 01:37:49 pm</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>bug, Frontend, School</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46852</td><td>Need to enhancement page frontend</td><td></td><td>03/17/2026 12:09:04 pm</td><td></td><td>Muhammed Talaat</td><td>Omar Adly</td><td></td><td>Omar Adly</td><td>Pending</td><td>Linkere</td><td>03/17/2026 10:28:05 am</td><td>03/17/2026 12:09:01 pm</td><td>03/17/2026 12:50:02 pm</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>enhancement</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46858</td><td>Subtotal = 0 When added the same product and a same trade term ( EXW / FOB )</td><td></td><td>03/17/2026 01:38:17 pm</td><td></td><td>Muhammed Talaat</td><td>Mohamed Salah</td><td></td><td></td><td>In Progress</td><td>Linkere</td><td>03/17/2026 10:58:28 am</td><td>03/17/2026 01:38:17 pm</td><td>03/17/2026 01:38:30 pm</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>Merchant, bug, Backend</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46860</td><td>Unable to create RFQ Request – &quot;Failed to create RFQ Request&quot; error</td><td>Description:
+When attempting to create an RFQ Request, the system fails to complete the action and displays an error message: &quot;Failed to create RFQ Request&quot;. The request is not submitted successfully.
+
+Expected Result:
+The RFQ Request should be created successfully and a confirmation message should appear.
+
+Actual Result:
+The system displays &quot;Failed to create RFQ Request&quot; and the request is not created.</td><td>03/17/2026 02:48:08 pm</td><td></td><td>Yara Mahmoud</td><td>Mohamed Salah</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/17/2026 11:20:46 am</td><td></td><td>03/17/2026 02:48:08 pm</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>bug, Backend</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46874</td><td>Selected product quantity resets to default when scrolling on product page</td><td>Description:
+When selecting a specific product quantity on the Product page, the selected quantity is not preserved. If the user scrolls up or down, the quantity resets back to the default value.
+
+Expected Result:
+The selected quantity should remain unchanged while scrolling.
+
+Actual Result:
+The quantity resets to the default value after scrolling.</td><td>03/17/2026 01:26:46 pm</td><td></td><td>Yara Mahmoud</td><td>ammar elkhouly</td><td></td><td>Omar Adly</td><td>Pending</td><td>Linkere</td><td>03/17/2026 12:36:06 pm</td><td></td><td>03/17/2026 01:26:46 pm</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>Frontend, bug</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46876</td><td>Mixed language (Arabic &amp; English) in Reset Password screen</td><td>Description:
+In the Reset Password section, there is an inconsistency in language where both Arabic and English are displayed together in the same screen. This creates a confusing user experience and indicates a localization issue.
+
+Expected Result:
+The screen should display content in a single consistent language based on the selected language (either Arabic or English).
+
+Actual Result:
+The screen displays a mix of Arabic and English at the same time.</td><td>03/17/2026 12:59:19 pm</td><td>03/24/2026 07:00:00 pm</td><td>Yara Mahmoud</td><td>ammar elkhouly</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/17/2026 12:54:54 pm</td><td></td><td>03/18/2026 10:09:49 am</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>bug, Frontend</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46878</td><td>Inconsistent required validation for &quot;From&quot; and &quot;To&quot; fields in Shipping &amp; Warehouse</td><td>Description:
+In the Shipping &amp; Warehouse section, there is inconsistent validation between fields. The &quot;From&quot; field is required, while the &quot;To&quot; field is not required, even though both fields should follow the same validation logic.
+
+Expected Result:
+Both From and To fields should have consistent validation (either both required).
+
+Actual Result:
+The From field is required, while the To field is not required, causing inconsistent behavior.</td><td>03/17/2026 03:19:27 pm</td><td>03/24/2026 07:00:00 pm</td><td>Yara Mahmoud</td><td>ammar elkhouly</td><td></td><td>Omar Adly</td><td>Pending</td><td>Linkere</td><td>03/17/2026 12:59:24 pm</td><td></td><td>03/18/2026 10:09:35 am</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>bug, Frontend</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46896</td><td>Need to sort a New Product</td><td></td><td>03/17/2026 02:55:44 pm</td><td></td><td>Muhammed Talaat</td><td>ammar elkhouly</td><td></td><td>Mohamed Salah</td><td>Pending</td><td>Linkere</td><td>03/17/2026 02:45:02 pm</td><td>03/17/2026 02:50:22 pm</td><td>03/17/2026 02:55:44 pm</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>Backend, enhancement, Supplier Dash</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46898</td><td>When Update time The delivery start time does not match the format</td><td>
+
+When update a warehouse in supplier dashboard</td><td>03/17/2026 03:03:41 pm</td><td></td><td>Muhammed Talaat</td><td>Anwar Abdelmaksoud</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/17/2026 12:30:10 pm</td><td></td><td>03/17/2026 03:03:41 pm</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td>Supplier Dash, Frontend, bug</td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			<tr>
+			<td>46900</td><td>Add Product button disabled when Trade Term is FOB and RFQ is selected</td><td>Description:
+When adding a product, if the Trade Term is set to FOB and the user selects RFQ, the Add Product button becomes disabled. This prevents the user from submitting the product, even though all required fields are filled correctly.
+
+Expected Result:
+The Add Product button should remain enabled and allow the product to be submitted.
+
+Actual Result:
+The Add Product button is disabled, preventing the product submission.</td><td>03/17/2026 03:21:56 pm</td><td>03/24/2026 07:00:00 pm</td><td>Yara Mahmoud</td><td>Anwar Abdelmaksoud</td><td></td><td></td><td>Pending</td><td>Linkere</td><td>03/17/2026 03:17:37 pm</td><td></td><td>03/17/2026 03:18:48 pm</td><td></td><td></td><td>N</td><td>None</td><td>Y</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>		</tr>
+			</tbody>
+</table>
